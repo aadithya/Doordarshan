@@ -6,14 +6,10 @@ gem 'bootstrap-sass', '2.0.0'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development do
-  gem 'sqlite3'
-end
 
-group :production do
-  # gems specifically for Heroku go here
-  gem "pg"
-end
+# gems specifically for Heroku go here
+gem "pg"
+#gem "sqlite3"
 
 # Gems used only for assets and not required
 # in production environments by default.
