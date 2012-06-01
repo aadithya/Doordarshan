@@ -1,3 +1,7 @@
 <h1>Database Channels List</h1>
-<%= Channel.all() %>
+<% Channel.all().each do |i| %>
+<div>
+<%= i.name %>
+</div>
+<% end %>
 
