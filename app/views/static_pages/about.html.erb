@@ -1,7 +1,7 @@
 <h1>Database Channels List</h1>
 <% Channel.all().each do |i| %>
 <div>
-<%= i.name %>
+<%= link_to "#{i.name}", programs_search_path(:search => "#{i.name}",:channel => "true")%>  
 </div>
 <% end %>
 
