@@ -12,7 +12,9 @@ def populate_db
 	date = 	ele.elements['date'].text
 	category = ele.elements['category'].text
 	channel = ele.attributes['channel']		
-	Program.create(title:title,date:date,category:category,channel:channel)
+	start = ele.attributes['start']
+	stop = ele.attributes['stop']
+	Program.create(title:title,date:date,category:category,channel:channel,start:start,stop:stop)
 	end
 end
 

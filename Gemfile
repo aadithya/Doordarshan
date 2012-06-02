@@ -10,7 +10,7 @@ gem 'bootstrap-sass', '2.0.0'
 # gems specifically for Heroku go here
 gem "pg"
 #gem "sqlite3"
-
+gem 'bootstrap-will_paginate'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
