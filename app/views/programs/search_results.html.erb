@@ -17,7 +17,7 @@ dt = DateTime.parse(time) %>
 <%= dt.strftime("%B  %d")  %>
 </span>
 
-<%= link_to "Alert" , "#"%> 
+<%= link_to "Alert" ,subscribe_path(:program => ele.id) %> 
 </span>
 </div>
 <%end%>

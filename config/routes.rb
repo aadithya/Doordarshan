@@ -9,6 +9,8 @@ Doordarshan::Application.routes.draw do
   match '/signup', to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
+  match '/subscribe', to: 'programs#subscribe'
+  match '/unsubscribe', to: 'programs#unsubscribe'
 
   root to: 'static_pages#home'
   # The priority is based upon order of creation:

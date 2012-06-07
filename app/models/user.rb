@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
   has_secure_password
+  has_many :subscribe_lists
+  has_many :programs, :through => :subscribe_lists
 
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
