@@ -1,4 +1,5 @@
 class ProgramsController < ApplicationController
+require 'gmail'
 def search_results
 if params[:channel] == "true"
   @programs = Program.where("channel = '#{params[:search]}'").paginate(:page => params[:page])
@@ -9,7 +10,8 @@ end
 
 def subscribe
   SubscribeList.create(:user_id => current_user.id, :program_id => params[:program]) 
-  redirect_to current_user
+  send_subscribed(params[:program],current_user)
+    redirect_to current_user
 end
 
 def unsubscribe
@@ -19,3 +21,4 @@ def unsubscribe
 end
 
 end
+

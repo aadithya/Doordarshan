@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to the TV Guide!"
+      send_hello @user 
       redirect_to @user
     else
       render 'new'
