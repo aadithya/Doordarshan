@@ -30,12 +30,7 @@ class ApplicationController < ActionController::Base
     prog = Program.find(program_id)
     subject "You just subscribed to " + prog.title
     text_part do
-      time = prog.start
-      length = time.index(" ")
-      time = time[0,length]
-      dt = DateTime.parse(time)
-      date = dt.strftime("%I : %M %p on %B %d") 
-      body "You just subscribed to " + prog.title + " at " + date
+      body "You just subscribed to " + prog.title  + " from the TVG"
     end
   end
  end 

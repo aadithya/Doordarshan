@@ -8,13 +8,7 @@
 <span class="pull-right">
 <span class="span2">
 <div style="margin: -5px 0 0 0; font-size: 22px">
-<% time = ele.start
-length = time.index(" ")
-time = time[0,length]
-dt = DateTime.parse(time) %>
-<%= dt.strftime("%I : %M %p")  %>
 </div>
-<%= dt.strftime("%B  %d")  %>
 </span>
 
 <%= link_to "Remove" ,unsubscribe_path(:program => ele.id) %> 

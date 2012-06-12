@@ -1,20 +1,20 @@
 <%= render 'programs/search' %>
 <h1>Search Results</h1>
 <% @programs.each do|ele| %>
-<div class="well">
-<span class="span3">
-<%= ele.title %> 
-</span>
-<span class="pull-right">
-<span class="span2">
-<div style="margin: -5px 0 0 0; font-size: 22px">
-</div>
-</span>
+	<div class="well">
+		<span class="span3">
+			<%= ele.title %> 
+		</span>
+		<span class="pull-right">
+			<span class="span2">
+				<div style="margin: -5px 0 0 0; font-size: 22px">
+			</div>
+		</span>
 
-<%= link_to "Alert" ,subscribe_path(:program => ele.id) %> 
-</span>
+		<%= link_to "Alert" ,subscribe_path(:program => ele.id) %> 
+	</span>
 </div>
 <%end%>
 <div class="pagination">
-<%= will_paginate @programs %>
+	<%= will_paginate @programs %>
 </div>
