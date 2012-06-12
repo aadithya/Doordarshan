@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  program: 
+  channel: 
+  start: 1
+  end: 1
+  premiere: 2012-06-10
+  finale: 2012-06-10
+  recurrence: MyString
+
+two:
+  program: 
+  channel: 
+  start: 1
+  end: 1
+  premiere: 2012-06-10
+  finale: 2012-06-10
+  recurrence: MyString

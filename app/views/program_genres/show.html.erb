@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Program:</b>
+  <%= @program_genre.program %>
+</p>
+
+<p>
+  <b>Genre:</b>
+  <%= @program_genre.genre %>
+</p>
+
+
+<%= link_to 'Edit', edit_program_genre_path(@program_genre) %> |
+<%= link_to 'Back', program_genres_path %>

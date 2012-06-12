@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Program:</b>
+  <%= @schedule.program %>
+</p>
+
+<p>
+  <b>Channel:</b>
+  <%= @schedule.channel %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%= @schedule.start %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%= @schedule.end %>
+</p>
+
+<p>
+  <b>Premiere:</b>
+  <%= @schedule.premiere %>
+</p>
+
+<p>
+  <b>Finale:</b>
+  <%= @schedule.finale %>
+</p>
+
+<p>
+  <b>Recurrence:</b>
+  <%= @schedule.recurrence %>
+</p>
+
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>

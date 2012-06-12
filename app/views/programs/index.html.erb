@@ -1,0 +1,25 @@
+<div id="program_list">
+<h1>Listing programs</h1>
+
+<table>
+  <% @programs.each do |program| %>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    <td>
+      <%= image_tag((program.image == '' ? 'programs/default.png' : program.image), :class => 'list_image') %>
+    </td>
+    <td class="list_description" >
+      <dl>
+        <dt><%= link_to program.title, program, :class => 'program_title' %></dt>
+        <dd>
+          <div class="program_category"><%= program.category.nil? ? '-' : program.category.name %></div>
+          <%= truncate(program.description, :length => 200) %>
+        </dd>
+      </dl>
+    </td>
+  </tr>
+  <% end %>
+</table>
+</div>
+<br/>
+
+<%= link_to 'New Program', new_program_path %>
