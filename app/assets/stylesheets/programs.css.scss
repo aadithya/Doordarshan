@@ -1,31 +1,120 @@
 // Place all the styles related to the Programs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.apple_pagination {
-  background: #f1f1f1;
-  border: 1px solid #e5e5e5;
-  text-align: center;
-  padding: 1em;
-  cursor: default; }
-  .apple_pagination a, .apple_pagination span {
-    padding: 0.2em 0.3em; }
-  .apple_pagination .disabled {
-    color: #aaaaaa; }
-  .apple_pagination .current {
-    font-style: normal;
-    font-weight: bold;
-    background-color: #bebebe;
-    display: inline-block;
-    width: 1.4em;
-    height: 1.4em;
-    line-height: 1.5;
-    -moz-border-radius: 1em;
-    -webkit-border-radius: 1em;
-    border-radius: 1em;
-    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
-  .apple_pagination a {
-    text-decoration: none;
-    color: black; }
-    .apple_pagination a:hover, .apple_pagination a:focus {
-      text-decoration: underline; }
 
+#store #notice {
+ color: #000;
+ border: 2px solid red;
+ padding: 1em;
+ margin-bottom: 2em;
+ background-color: #f0f0f0;
+ font: bold smaller sans-serif;
+}
+
+#store h1 {
+ font: 150% sans-serif;
+ color: #226;
+ border-bottom: 3px dotted #77d;
+}
+
+#program_list table {
+ border-collapse: collapse;
+ margin: auto;
+ width: 900px;
+}
+
+#program_list table tr td {
+ padding: 5px;
+ vertical-align: top;
+}
+
+#program_list .list_image {
+ width: 128px;
+ height: 128px;
+}
+
+#program_list .list_description {
+ padding: 10px;
+}
+
+#program_list .list_description dt {
+	font-size: 1.5em;
+  line-height: 1.3em;
+}
+
+#program_list .list_description dd {
+ margin: 0;
+}
+
+#program_list .list_actions {
+ font-size: x-small;
+ text-align: right;
+ padding-left: 1em;
+}
+
+#program_list .list_line_even {
+ background-color: #FFFFFF;
+}
+
+#program_list .list_line_odd {
+ background-color: #E8E8E8;
+}
+
+#store .entry {
+ overflow: auto;
+ margin-top: 1em;
+ border-bottom: 1px dotted #77d;
+}
+
+#store .title {
+ font-size: 120%;
+ font-family: sans-serif;
+}
+
+#store .entry img {
+ width: 80px;
+ margin-right: 5px;
+ margin-bottom: 5px;
+ float: left;
+}
+
+#store .entry h3 {
+ margin-top: 0;
+ margin-bottom: 2px;
+ color: #227;
+}
+
+#store .entry p {
+ margin-top: 0.5em; 
+ margin-bottom: 0.8em; 
+}
+
+#store .entry .price_line {
+ clear: both;
+ margin-bottom: 0.5em;
+}
+
+#store .entry .add_to_cart {
+ position: relative;
+}
+
+#store .entry .price {
+ color: #44a;
+ font-weight: bold;
+ margin-right: 2em;
+}
+
+#program_list a.program_title, #program_list a.program_title:visited, #program_list a.program_title:hover {
+ color: #136CB2;
+ background-color: transparent;
+ text-decoration: none;
+}
+
+#program_list a.program_title:hover {
+ text-decoration: underline;
+}
+
+#program_list .program_category {
+ color: #999999;
+ font-size: 0.9em;
+}

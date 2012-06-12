@@ -1,18 +1,33 @@
 Doordarshan::Application.routes.draw do
+  match '/programs/search', to: 'programs#search_results'
+
+  resources :schedules
+
+  resources :channels
+
+  resources :program_genres
+
+  resources :program_categories
+
+  resources :categories
+
+  resources :genres
+
+  resources :programs
+
   resources :users
+
   resources :sessions, only: [:new, :create, :destroy]
 
   match '/help', to: 'static_pages#help'
   match '/about', to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
-  match '/programs/search', to: 'programs#search_results'
   match '/signup', to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   match '/subscribe', to: 'programs#subscribe'
   match '/unsubscribe', to: 'programs#unsubscribe'
 
-  root to: 'static_pages#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -62,6 +77,8 @@ Doordarshan::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+  # root :to => 'welcome#index'
+  root :to => 'static_pages#home'
 
   # See how all your routes lay out with "rake routes"
 

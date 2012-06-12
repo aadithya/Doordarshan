@@ -13,22 +13,61 @@
 
 ActiveRecord::Schema.define(:version => 20120607063249) do
 
-  create_table "channels", :force => true do |t|
+  create_table "categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "programs", :force => true do |t|
-    t.string   "title"
-    t.string   "date"
-    t.string   "category"
-    t.string   "channel"
+  create_table "channels", :force => true do |t|
+    t.string   "name"
+    t.string   "image"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "genres", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "start"
-    t.string   "stop"
   end
+
+  create_table "program_genres", :force => true do |t|
+    t.integer  "program_id"
+    t.integer  "genre_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "program_genres", ["genre_id"], :name => "index_program_genres_on_genre_id"
+  add_index "program_genres", ["program_id"], :name => "index_program_genres_on_program_id"
+
+  create_table "programs", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image"
+    t.integer  "category_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "programs", ["category_id"], :name => "index_programs_on_category_id"
+
+  create_table "schedules", :force => true do |t|
+    t.integer  "program_id"
+    t.integer  "channel_id"
+    t.integer  "start"
+    t.integer  "end"
+    t.date     "premiere"
+    t.date     "finale"
+    t.string   "recurrence"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "schedules", ["channel_id"], :name => "index_schedules_on_channel_id"
+  add_index "schedules", ["program_id"], :name => "index_schedules_on_program_id"
 
   create_table "subscribe_lists", :force => true do |t|
     t.integer  "user_id"

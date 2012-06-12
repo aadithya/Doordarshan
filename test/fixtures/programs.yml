@@ -2,12 +2,12 @@
 
 one:
   title: MyString
-  date: MyString
-  category: MyString
-  channel: MyString
+  description: MyText
+  image: MyString
+  category: 
 
 two:
   title: MyString
-  date: MyString
-  category: MyString
-  channel: MyString
+  description: MyText
+  image: MyString
+  category: 

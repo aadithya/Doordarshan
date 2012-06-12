@@ -1,3 +1,4 @@
 class Channel < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :description, :image, :name
+  has_many :schedules
 end
