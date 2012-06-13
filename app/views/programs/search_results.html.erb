@@ -8,12 +8,14 @@
 		<span class="pull-right">
 			<span class="span2">
 				<div style="margin: -5px 0 0 0; font-size: 22px">
-			</div>
-		</span>
+				</div>
+			</span>
 
-		<%= link_to "Alert" ,subscribe_path(:program => ele.id) %> 
-	</span>
-</div>
+			<% if signed_in? %>
+				<%= link_to "Alert" ,subscribe_path(:program => ele.id) %> 
+			<% end %>
+		</span>
+	</div>
 <%end%>
 <div class="pagination">
 	<%= will_paginate @programs %>
