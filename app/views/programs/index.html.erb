@@ -16,6 +16,11 @@
         </dd>
       </dl>
     </td>
+      <td>
+        <% if signed_in? %>
+          <%= link_to "Alert" , subscribe_path(:program => program.id) %> 
+        <% end %>
+      </td>
   </tr>
   <% end %>
 </table>
