@@ -1,0 +1,151 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddIndexToUsersEmail	db/migrate/20120604235744_add_index_to_users_email.rb	/^class AddIndexToUsersEmail < ActiveRecord::Migration$/;"	c
+AddPasswordDigestToUsers	db/migrate/20120605000602_add_password_digest_to_users.rb	/^class AddPasswordDigestToUsers < ActiveRecord::Migration$/;"	c
+AddRememberTokenToUsers	db/migrate/20120606050434_add_remember_token_to_users.rb	/^class AddRememberTokenToUsers < ActiveRecord::Migration$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Doordarshan
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+BrowsingTest	test/performance/browsing_test.rb	/^class BrowsingTest < ActionDispatch::PerformanceTest$/;"	c
+CategoriesController	app/controllers/categories_controller.rb	/^class CategoriesController < ApplicationController$/;"	c
+CategoriesControllerTest	test/functional/categories_controller_test.rb	/^class CategoriesControllerTest < ActionController::TestCase$/;"	c
+CategoriesHelper	app/helpers/categories_helper.rb	/^module CategoriesHelper$/;"	m
+CategoriesHelperTest	test/unit/helpers/categories_helper_test.rb	/^class CategoriesHelperTest < ActionView::TestCase$/;"	c
+Category	app/models/category.rb	/^class Category < ActiveRecord::Base$/;"	c
+CategoryTest	test/unit/category_test.rb	/^class CategoryTest < ActiveSupport::TestCase$/;"	c
+Channel	app/models/channel.rb	/^class Channel < ActiveRecord::Base$/;"	c
+ChannelTest	test/unit/channel_test.rb	/^class ChannelTest < ActiveSupport::TestCase$/;"	c
+ChannelsController	app/controllers/channels_controller.rb	/^class ChannelsController < ApplicationController$/;"	c
+ChannelsControllerTest	test/functional/channels_controller_test.rb	/^class ChannelsControllerTest < ActionController::TestCase$/;"	c
+ChannelsHelper	app/helpers/channels_helper.rb	/^module ChannelsHelper$/;"	m
+ChannelsHelperTest	test/unit/helpers/channels_helper_test.rb	/^class ChannelsHelperTest < ActionView::TestCase$/;"	c
+CreateCategories	db/migrate/20120508063914_create_categories.rb	/^class CreateCategories < ActiveRecord::Migration$/;"	c
+CreateChannels	db/migrate/20120509163409_create_channels.rb	/^class CreateChannels < ActiveRecord::Migration$/;"	c
+CreateGenres	db/migrate/20120508063855_create_genres.rb	/^class CreateGenres < ActiveRecord::Migration$/;"	c
+CreateProgramGenres	db/migrate/20120508080918_create_program_genres.rb	/^class CreateProgramGenres < ActiveRecord::Migration$/;"	c
+CreatePrograms	db/migrate/20120508080859_create_programs.rb	/^class CreatePrograms < ActiveRecord::Migration$/;"	c
+CreateSchedules	db/migrate/20120510073002_create_schedules.rb	/^class CreateSchedules < ActiveRecord::Migration$/;"	c
+CreateSubscribeLists	db/migrate/20120607063249_create_subscribe_lists.rb	/^class CreateSubscribeLists < ActiveRecord::Migration$/;"	c
+CreateUsers	db/migrate/20120603070206_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
+Doordarshan	config/application.rb	/^module Doordarshan$/;"	m
+Genre	app/models/genre.rb	/^class Genre < ActiveRecord::Base$/;"	c
+GenreTest	test/unit/genre_test.rb	/^class GenreTest < ActiveSupport::TestCase$/;"	c
+GenresController	app/controllers/genres_controller.rb	/^class GenresController < ApplicationController$/;"	c
+GenresControllerTest	test/functional/genres_controller_test.rb	/^class GenresControllerTest < ActionController::TestCase$/;"	c
+GenresHelper	app/helpers/genres_helper.rb	/^module GenresHelper$/;"	m
+GenresHelperTest	test/unit/helpers/genres_helper_test.rb	/^class GenresHelperTest < ActionView::TestCase$/;"	c
+HomeControllerTest	test/functional/home_controller_test.rb	/^class HomeControllerTest < ActionController::TestCase$/;"	c
+HomeHelperTest	test/unit/helpers/home_helper_test.rb	/^class HomeHelperTest < ActionView::TestCase$/;"	c
+Notifier	app/mailers/notifier.rb	/^class Notifier < ActionMailer::Base$/;"	c
+Program	app/models/program.rb	/^class Program < ActiveRecord::Base$/;"	c
+ProgramCategoriesControllerTest	test/functional/program_categories_controller_test.rb	/^class ProgramCategoriesControllerTest < ActionController::TestCase$/;"	c
+ProgramCategoriesHelperTest	test/unit/helpers/program_categories_helper_test.rb	/^class ProgramCategoriesHelperTest < ActionView::TestCase$/;"	c
+ProgramCategoryTest	test/unit/program_category_test.rb	/^class ProgramCategoryTest < ActiveSupport::TestCase$/;"	c
+ProgramGenre	app/models/program_genre.rb	/^class ProgramGenre < ActiveRecord::Base$/;"	c
+ProgramGenreTest	test/unit/program_genre_test.rb	/^class ProgramGenreTest < ActiveSupport::TestCase$/;"	c
+ProgramGenresController	app/controllers/program_genres_controller.rb	/^class ProgramGenresController < ApplicationController$/;"	c
+ProgramGenresControllerTest	test/functional/program_genres_controller_test.rb	/^class ProgramGenresControllerTest < ActionController::TestCase$/;"	c
+ProgramGenresHelper	app/helpers/program_genres_helper.rb	/^module ProgramGenresHelper$/;"	m
+ProgramGenresHelperTest	test/unit/helpers/program_genres_helper_test.rb	/^class ProgramGenresHelperTest < ActionView::TestCase$/;"	c
+ProgramTest	test/unit/program_test.rb	/^class ProgramTest < ActiveSupport::TestCase$/;"	c
+ProgramsController	app/controllers/programs_controller.rb	/^class ProgramsController < ApplicationController$/;"	c
+ProgramsControllerTest	test/functional/programs_controller_test.rb	/^class ProgramsControllerTest < ActionController::TestCase$/;"	c
+ProgramsHelper	app/helpers/programs_helper.rb	/^module ProgramsHelper$/;"	m
+ProgramsHelperTest	test/unit/helpers/programs_helper_test.rb	/^class ProgramsHelperTest < ActionView::TestCase$/;"	c
+Schedule	app/models/schedule.rb	/^class Schedule < ActiveRecord::Base$/;"	c
+ScheduleTest	test/unit/schedule_test.rb	/^class ScheduleTest < ActiveSupport::TestCase$/;"	c
+SchedulesController	app/controllers/schedules_controller.rb	/^class SchedulesController < ApplicationController$/;"	c
+SchedulesControllerTest	test/functional/schedules_controller_test.rb	/^class SchedulesControllerTest < ActionController::TestCase$/;"	c
+SchedulesHelper	app/helpers/schedules_helper.rb	/^module SchedulesHelper$/;"	m
+SchedulesHelperTest	test/unit/helpers/schedules_helper_test.rb	/^class SchedulesHelperTest < ActionView::TestCase$/;"	c
+SessionsController	app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
+SessionsHelper	app/helpers/sessions_helper.rb	/^module SessionsHelper$/;"	m
+StaticPagesController	app/controllers/static_pages_controller.rb	/^class StaticPagesController < ApplicationController$/;"	c
+StaticPagesHelper	app/helpers/static_pages_helper.rb	/^module StaticPagesHelper$/;"	m
+SubscribeList	app/models/subscribe_list.rb	/^class SubscribeList < ActiveRecord::Base$/;"	c
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
+about	app/controllers/static_pages_controller.rb	/^  def about$/;"	f	class:StaticPagesController
+change	db/migrate/20120508063855_create_genres.rb	/^  def change$/;"	f	class:CreateGenres
+change	db/migrate/20120508063914_create_categories.rb	/^  def change$/;"	f	class:CreateCategories
+change	db/migrate/20120508080859_create_programs.rb	/^  def change$/;"	f	class:CreatePrograms
+change	db/migrate/20120508080918_create_program_genres.rb	/^  def change$/;"	f	class:CreateProgramGenres
+change	db/migrate/20120509163409_create_channels.rb	/^  def change$/;"	f	class:CreateChannels
+change	db/migrate/20120510073002_create_schedules.rb	/^  def change$/;"	f	class:CreateSchedules
+change	db/migrate/20120603070206_create_users.rb	/^  def change$/;"	f	class:CreateUsers
+change	db/migrate/20120604235744_add_index_to_users_email.rb	/^  def change$/;"	f	class:AddIndexToUsersEmail
+change	db/migrate/20120605000602_add_password_digest_to_users.rb	/^  def change$/;"	f	class:AddPasswordDigestToUsers
+change	db/migrate/20120606050434_add_remember_token_to_users.rb	/^  def change$/;"	f	class:AddRememberTokenToUsers
+change	db/migrate/20120607063249_create_subscribe_lists.rb	/^  def change$/;"	f	class:CreateSubscribeLists
+channel_list	app/helpers/static_pages_helper.rb	/^  def channel_list()$/;"	f	class:StaticPagesHelper
+create	app/controllers/categories_controller.rb	/^  def create$/;"	f	class:CategoriesController
+create	app/controllers/channels_controller.rb	/^  def create$/;"	f	class:ChannelsController
+create	app/controllers/genres_controller.rb	/^  def create$/;"	f	class:GenresController
+create	app/controllers/program_genres_controller.rb	/^  def create$/;"	f	class:ProgramGenresController
+create	app/controllers/programs_controller.rb	/^  def create$/;"	f	class:ProgramsController
+create	app/controllers/schedules_controller.rb	/^  def create$/;"	f	class:SchedulesController
+create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
+create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
+create_remember_token	app/models/user.rb	/^    def create_remember_token$/;"	f	class:User
+current_user	app/helpers/sessions_helper.rb	/^  def current_user$/;"	f	class:SessionsHelper
+current_user=	app/helpers/sessions_helper.rb	/^  def current_user=(user)$/;"	f	class:SessionsHelper
+destroy	app/controllers/categories_controller.rb	/^  def destroy$/;"	f	class:CategoriesController
+destroy	app/controllers/channels_controller.rb	/^  def destroy$/;"	f	class:ChannelsController
+destroy	app/controllers/genres_controller.rb	/^  def destroy$/;"	f	class:GenresController
+destroy	app/controllers/program_genres_controller.rb	/^  def destroy$/;"	f	class:ProgramGenresController
+destroy	app/controllers/programs_controller.rb	/^  def destroy$/;"	f	class:ProgramsController
+destroy	app/controllers/schedules_controller.rb	/^  def destroy$/;"	f	class:SchedulesController
+destroy	app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
+edit	app/controllers/categories_controller.rb	/^  def edit$/;"	f	class:CategoriesController
+edit	app/controllers/channels_controller.rb	/^  def edit$/;"	f	class:ChannelsController
+edit	app/controllers/genres_controller.rb	/^  def edit$/;"	f	class:GenresController
+edit	app/controllers/program_genres_controller.rb	/^  def edit$/;"	f	class:ProgramGenresController
+edit	app/controllers/programs_controller.rb	/^  def edit$/;"	f	class:ProgramsController
+edit	app/controllers/schedules_controller.rb	/^  def edit$/;"	f	class:SchedulesController
+ensure_not_referenced_by_any_program	app/models/category.rb	/^  def ensure_not_referenced_by_any_program$/;"	f	class:Category
+ensure_not_referenced_by_any_program	app/models/genre.rb	/^  def ensure_not_referenced_by_any_program$/;"	f	class:Genre
+full_title	app/helpers/application_helper.rb	/^  def full_title(page_title)$/;"	f	class:ApplicationHelper
+index	app/controllers/categories_controller.rb	/^  def index$/;"	f	class:CategoriesController
+index	app/controllers/channels_controller.rb	/^  def index$/;"	f	class:ChannelsController
+index	app/controllers/genres_controller.rb	/^  def index$/;"	f	class:GenresController
+index	app/controllers/program_genres_controller.rb	/^  def index$/;"	f	class:ProgramGenresController
+index	app/controllers/programs_controller.rb	/^  def index$/;"	f	class:ProgramsController
+index	app/controllers/schedules_controller.rb	/^  def index$/;"	f	class:SchedulesController
+new	app/controllers/categories_controller.rb	/^  def new$/;"	f	class:CategoriesController
+new	app/controllers/channels_controller.rb	/^  def new$/;"	f	class:ChannelsController
+new	app/controllers/genres_controller.rb	/^  def new$/;"	f	class:GenresController
+new	app/controllers/program_genres_controller.rb	/^  def new$/;"	f	class:ProgramGenresController
+new	app/controllers/programs_controller.rb	/^  def new$/;"	f	class:ProgramsController
+new	app/controllers/schedules_controller.rb	/^  def new$/;"	f	class:SchedulesController
+new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
+notify_hello	app/controllers/application_controller.rb	/^  def notify_hello( gmail, user)$/;"	f
+notify_subscribe	app/controllers/application_controller.rb	/^  def notify_subscribe( gmail, program_id, user)$/;"	f
+search_results	app/controllers/programs_controller.rb	/^  def search_results$/;"	f	class:ProgramsController
+send_hello	app/controllers/application_controller.rb	/^  def send_hello(user)$/;"	f
+send_subscribed	app/controllers/application_controller.rb	/^  def send_subscribed(program_id,user)$/;"	f	class:ApplicationController
+show	app/controllers/categories_controller.rb	/^  def show$/;"	f	class:CategoriesController
+show	app/controllers/channels_controller.rb	/^  def show$/;"	f	class:ChannelsController
+show	app/controllers/genres_controller.rb	/^  def show$/;"	f	class:GenresController
+show	app/controllers/program_genres_controller.rb	/^  def show$/;"	f	class:ProgramGenresController
+show	app/controllers/programs_controller.rb	/^  def show$/;"	f	class:ProgramsController
+show	app/controllers/schedules_controller.rb	/^  def show$/;"	f	class:SchedulesController
+show	app/controllers/users_controller.rb	/^ def show$/;"	f	class:UsersController
+sign_in	app/helpers/sessions_helper.rb	/^  def sign_in(user)$/;"	f	class:SessionsHelper
+sign_out	app/helpers/sessions_helper.rb	/^  def sign_out$/;"	f	class:SessionsHelper
+signed_in?	app/helpers/sessions_helper.rb	/^  def signed_in?$/;"	f	class:SessionsHelper
+subscribe	app/controllers/programs_controller.rb	/^  def subscribe$/;"	f	class:ProgramsController
+test_homepage	test/performance/browsing_test.rb	/^  def test_homepage$/;"	f	class:BrowsingTest
+unsubscribe	app/controllers/programs_controller.rb	/^  def unsubscribe$/;"	f	class:ProgramsController
+update	app/controllers/categories_controller.rb	/^  def update$/;"	f	class:CategoriesController
+update	app/controllers/channels_controller.rb	/^  def update$/;"	f	class:ChannelsController
+update	app/controllers/genres_controller.rb	/^  def update$/;"	f	class:GenresController
+update	app/controllers/program_genres_controller.rb	/^  def update$/;"	f	class:ProgramGenresController
+update	app/controllers/programs_controller.rb	/^  def update$/;"	f	class:ProgramsController
+update	app/controllers/schedules_controller.rb	/^  def update$/;"	f	class:SchedulesController
+welcome	app/mailers/notifier.rb	/^ def welcome(recipient)$/;"	f	class:Notifier
