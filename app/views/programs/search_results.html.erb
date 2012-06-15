@@ -1,22 +1,32 @@
 <%= render 'programs/search' %>
 <h1>Search Results</h1>
-<% @programs.each do|ele| %>
-	<div class="well">
-		<span class="span3">
-			<%= ele.title %> 
-		</span>
-		<span class="pull-right">
-			<span class="span2">
-				<div style="margin: -5px 0 0 0; font-size: 22px">
-				</div>
-			</span>
 
-			<% if signed_in? %>
-				<%= link_to "Alert" ,subscribe_path(:program => ele.id) %> 
-			<% end %>
-		</span>
-	</div>
-<%end%>
+<div id="program_list">
+  <table>
+  <% @programs.each do |program| %>
+    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+      <td class="list_image">
+        <%= image_tag((program.image == '' ? 'programs/default.png' : program.image)) %>
+      </td>
+      <td class="list_description" >
+        <dl>
+          <dt><%= link_to program.title, program, :class => 'program_title' %></dt>
+          <dd>
+            <div class="program_category"><%= program.category.nil? ? '-' : program.category.name %></div>
+            <%= truncate(program.description, :length => 200) %>
+          </dd>
+        </dl>
+      </td>
+      <td class="list_actions">
+        <% if signed_in? %>
+          <%= link_to "Alert" , subscribe_path(:program => program.id) %> 
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+
 <div class="pagination">
-	<%= will_paginate @programs %>
+  <%= will_paginate @programs %>
 </div>

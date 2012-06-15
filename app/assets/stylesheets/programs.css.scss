@@ -30,21 +30,6 @@
     .apple_pagination a:hover, .apple_pagination a:focus {
       text-decoration: underline; }
 
-#store #notice {
- color: #000;
- border: 2px solid red;
- padding: 1em;
- margin-bottom: 2em;
- background-color: #f0f0f0;
- font: bold smaller sans-serif;
-}
-
-#store h1 {
- font: 150% sans-serif;
- color: #226;
- border-bottom: 3px dotted #77d;
-}
-
 #program_list table {
  border-collapse: collapse;
  margin: auto;
@@ -56,12 +41,17 @@
  vertical-align: top;
 }
 
-#program_list .list_image {
+#program_list td.list_image img {
  width: 128px;
  height: 128px;
 }
 
-#program_list .list_description {
+#program_list td.list_image {
+ width: 15%;
+}
+
+#program_list td.list_description {
+ width: 70%;
  padding: 10px;
 }
 
@@ -75,9 +65,10 @@
 }
 
 #program_list .list_actions {
- font-size: x-small;
  text-align: right;
- padding-left: 1em;
+ padding: 0 1em 1em 2em;
+ font-size: 1.2em;
+ vertical-align: middle;
 }
 
 #program_list .list_line_even {
@@ -86,50 +77,6 @@
 
 #program_list .list_line_odd {
  background-color: #E8E8E8;
-}
-
-#store .entry {
- overflow: auto;
- margin-top: 1em;
- border-bottom: 1px dotted #77d;
-}
-
-#store .title {
- font-size: 120%;
- font-family: sans-serif;
-}
-
-#store .entry img {
- width: 80px;
- margin-right: 5px;
- margin-bottom: 5px;
- float: left;
-}
-
-#store .entry h3 {
- margin-top: 0;
- margin-bottom: 2px;
- color: #227;
-}
-
-#store .entry p {
- margin-top: 0.5em; 
- margin-bottom: 0.8em; 
-}
-
-#store .entry .price_line {
- clear: both;
- margin-bottom: 0.5em;
-}
-
-#store .entry .add_to_cart {
- position: relative;
-}
-
-#store .entry .price {
- color: #44a;
- font-weight: bold;
- margin-right: 2em;
 }
 
 #program_list a.program_title, #program_list a.program_title:visited, #program_list a.program_title:hover {
