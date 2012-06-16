@@ -15,7 +15,9 @@ class ProgramsController < ApplicationController
 
   def search_results
     query = '%' + (params[:search].upcase.gsub /s+/, "%") + '%'
-    @programs = Program.where("UPPER(title) LIKE '#{query}'").paginate(:page => params[:page])
+    @programs = Program.find(:all,
+      :conditions => "UPPER(title) LIKE '#{query}'",
+      :include => [:category, :users]).paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

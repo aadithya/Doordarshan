@@ -12,14 +12,15 @@
         <dl>
           <dt><%= link_to program.title, program, :class => 'program_title' %></dt>
           <dd>
-            <div class="program_category"><%= program.category.nil? ? '-' : program.category.name %></div>
+            <%= program.category.nil? ? '-' : program.category.name %>
+            (<%= program.users.nil? ? 0 : program.users.count %> subsribers)<br/>
             <%= truncate(program.description, :length => 200) %>
           </dd>
         </dl>
       </td>
       <td class="list_actions">
         <% if signed_in? %>
-          <%= link_to "Alert" , subscribe_path(:program => program.id) %> 
+          <%= link_to "Subscribe" , subscribe_path(:program => program.id) %>
         <% end %>
       </td>
     </tr>
