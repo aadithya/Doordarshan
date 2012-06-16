@@ -20,7 +20,11 @@
       </td>
       <td class="list_actions">
         <% if signed_in? %>
-          <%= link_to "Subscribe" , subscribe_path(:program => program.id) %>
+          <% if @currentSubscriptions.has_key?("#{program.id}") %>
+            <%= link_to "Unsubscribe" , unsubscribe_path(:program => program.id) %>
+          <% else %>
+            <%= link_to "Subscribe" , subscribe_path(:program => program.id) %>
+          <% end %>
         <% end %>
       </td>
     </tr>

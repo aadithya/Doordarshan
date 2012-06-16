@@ -15,9 +15,21 @@ class ProgramsController < ApplicationController
 
   def search_results
     query = '%' + (params[:search].upcase.gsub /s+/, "%") + '%'
+    # TODO: All we need here is the count(subscribers)
+    # Find a better way to get this
     @programs = Program.find(:all,
       :conditions => "UPPER(title) LIKE '#{query}'",
       :include => [:category, :users]).paginate(:page => params[:page])
+
+    @subscribedPrograms = SubscribeList.find(:all,
+      :select => "program_id",
+      :conditions => ["user_id = ?", "#{current_user.id}"])
+
+    # TODO: there has to be a better way to create hash list
+    @currentSubscriptions = Hash.new
+    @subscribedPrograms.each do |s|
+      @currentSubscriptions["#{s.program_id}"] = s.program_id
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -99,13 +111,13 @@ class ProgramsController < ApplicationController
   def subscribe
     SubscribeList.create(:user_id => current_user.id, :program_id => params[:program]) 
     send_subscribed(params[:program],current_user)
-    redirect_to current_user
+    redirect_to :back
   end
 
   def unsubscribe
     subscription = SubscribeList.find_by_user_id_and_program_id( current_user.id,  params[:program]) 
     subscription.delete()
-    redirect_to current_user
+    redirect_to :back
   end
 
 end
