@@ -1,0 +1,21 @@
+<% content_for :head do %>
+<%= javascript_include_tag 'jquery-1.7.2.min', 'jquery-ui-1.8.21.custom.min' %>
+<%= stylesheet_link_tag 'jquery-ui-1.8.21.custom' %>
+
+<script type="text/javascript">
+$(document).ready(function(){
+jQuery.ajaxSetup({
+'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+})
+$("#q").autocomplete('result', function(event, data, formatted) {
+alert("here");
+if (data)
+document.location.href = '/tags/' + data[1];
+});
+});
+</script>
+<% end%>
+<%= form_tag("/tags/", :method => "get") do %>
+  <%= text_field_tag :q, params[:q] %>
+  <%= submit_tag "Locate city", :name => nil %>
+<% end %>
