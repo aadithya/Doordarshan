@@ -1,0 +1,6 @@
+<% provide(:title, "Subscribe") %>
+<%= form_for(@user) do |f| %>
+      <%= f.label :name, "Enter Tag" %>
+      <%= f.text_field :name ,value:"" %>
+<% end %>
+

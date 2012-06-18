@@ -18,4 +18,9 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+  def subscribe
+    @title = "Subscribed Tags"
+    @user = User.find(params[:id])
+    render 'show_subscribe'
+  end
 end
