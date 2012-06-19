@@ -20,7 +20,7 @@ Doordarshan::Application.routes.draw do
       get :subscribe
     end
   end
-
+  resources :subscriptions, only: [:create, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
 
   match '/help', to: 'static_pages#help'

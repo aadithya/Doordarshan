@@ -21,6 +21,11 @@ class UsersController < ApplicationController
   def subscribe
     @title = "Subscribed Tags"
     @user = User.find(params[:id])
+	@tags = Subscription.find_all_by_user_id(params[:id])
+	@tagNames = []
+	@tags.each do |tag|
+		@tagNames.push(Tag.find(tag.tag_id))
+	end
     render 'show_subscribe'
   end
 end

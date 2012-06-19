@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120613204659) do
+ActiveRecord::Schema.define(:version => 20121619104348) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -88,6 +88,23 @@ ActiveRecord::Schema.define(:version => 20120613204659) do
   create_table "subscribe_lists", :force => true do |t|
     t.integer  "user_id"
     t.integer  "program_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "subscriptions", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "tag_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "subscriptions", ["tag_id"], :name => "index_subscriptions_on_tag_id"
+  add_index "subscriptions", ["user_id", "tag_id"], :name => "index_subscriptions_on_user_id_and_tag_id", :unique => true
+  add_index "subscriptions", ["user_id"], :name => "index_subscriptions_on_user_id"
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

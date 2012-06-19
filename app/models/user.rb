@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
 	has_secure_password
 	has_many :subscribe_lists
 	has_many :programs, :through => :subscribe_lists
+	has_many :subscriptions, dependent: :destroy
+	has_many :tags, through: :subscriptions
 
 	before_save { |user| user.email = email.downcase }
 	before_save :create_remember_token
@@ -14,7 +16,12 @@ class User < ActiveRecord::Base
 		uniqueness: { case_sensitive: false }
 	validates :password, presence: true, length: { minimum: 6 }
 	validates :password_confirmation, presence: true
-
+  def subscribe!(sTag)
+	subscriptions.create!(tag_id: sTag.id)
+  end
+  def unsubscribe!(sTag)
+    subscriptions.find_by_tag_id(sTag.id).destroy
+  end
 	def send_mail( program_id, email)
 		Gmail.new("remotecontroller1", "remotecontroller") do |gmail|
 			gmail.deliver do

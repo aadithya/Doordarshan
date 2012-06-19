@@ -1,6 +1,12 @@
 <% provide(:title, "Subscribe") %>
-<%= form_for(@user) do |f| %>
+<%= form_for(current_user.subscriptions.build(), remote: true) do |f| %>
       <%= f.label :name, "Enter Tag" %>
       <%= f.text_field :name ,value:"" %>
+	  <%= f.submit "Subscribe", class: "btn btn-large" %>
 <% end %>
+<div id="user_tags">
+    <% @tagNames.each do |tag| %>
+        <%= link_to tag.name, '#' %>
+    <% end %>
+</div>
 
