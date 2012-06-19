@@ -1,5 +1,6 @@
 
 class ProgramsController < ApplicationController
+  require 'will_paginate/array'
   require 'gmail'
 
   # GET /programs
