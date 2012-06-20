@@ -6,11 +6,13 @@ gem 'mime'
 gem 'ruby-gmail'
 gem 'bootstrap-sass', '2.0.0'
 gem 'bootstrap-will_paginate'
+gem 'bootswatch-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'twitter'
 
 
 # Gems used only for assets and not required
